@@ -1,4 +1,4 @@
-# Doubly Robust Estimator for Off-Policy Evaluation with Large Action Spaces
+## Doubly Robust Estimator for Off-Policy Evaluation with Large Action Spaces
 ### Tatsuhiro Shimizu
 ### *AI Lab, CyberAgent*, Tokyo, Japan
 ### 0009-0009-9746-3346

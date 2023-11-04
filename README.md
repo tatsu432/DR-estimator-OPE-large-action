@@ -60,5 +60,11 @@ src/synthetic/main_n_decifient_actions.ipynb
 # How does MDR perform with varying standard deviation of reward?
 src/synthetic/main_reward_std.ipynb
 
+# How does MDR perform with varying number of category dimensions?
+src/synthetic/main_n_cat_dim.ipynb
+
+# How does MDR perform with varying number of categories per dimension?
+src/synthetic/main_n_cat_per_dim.ipynb
+
 ```
 

@@ -19,8 +19,8 @@ def run_ope(
     action_dist_val: np.ndarray,
     # \hat{q(x, a)}
     estimated_rewards: Optional[np.ndarray] = None,
-    estimated_rewards_mrdr: Optional[np.ndarray] = None,
     embed_selection: bool = False,
+    estimated_rewards_mdr: Optional[np.ndarray] = None,
 ) -> np.ndarray:
 
     if embed_selection is False:
@@ -32,11 +32,6 @@ def run_ope(
             IPS(estimator_name="IPS"),
             DR(estimator_name="DR"),
             DM(estimator_name="DM"),
-            MIPS(
-                n_actions=val_bandit_data["n_actions"],
-                embedding_selection_method=None,
-                estimator_name="MIPS",
-            ),
         ]
     else:
         ope_estimators = [

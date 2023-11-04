@@ -13,9 +13,9 @@ import seaborn as sns
 
 from tqdm import tqdm
 
-n_actions=2000
+n_actions=100
 dim_context=10
-beta=-0.1
+beta=-1
 reward_type="continuous"
 n_cat_per_dim=10
 latent_param_mat_dim=5
@@ -23,9 +23,9 @@ n_cat_dim=3
 n_unobserved_cat_dim=0
 n_deficient_actions=0
 reward_function=linear_reward_function
-reward_std=3
+reward_std=2.5
 random_state=12345
 
-eps=0.2
+eps=0.05 
 
-n_seeds = 10
+n_seeds = 5

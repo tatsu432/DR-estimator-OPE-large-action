@@ -2,6 +2,7 @@ import matplotlib.pyplot as plt
 from matplotlib.patches import Patch
 from matplotlib.lines import Line2D
 import seaborn as sns
+import conf
 
 plt.style.use("ggplot")
 
@@ -32,84 +33,55 @@ line_legend_elements = [
     Line2D([0], [0], color=registered_colors[est], linewidth=5, marker='o', markerfacecolor=registered_colors[est], markersize=10, label=est) for est in legend
 ]
 
+y_list = ["se", "bias", "variance"]
+title_list = ["MSE", "Squared Bias", "Variance"]
+
 def plot_line(
     result_df, 
     x, 
     xlabel, 
-    flag_log_scale, 
-    flag_share_y_scale = True
+    xticklabels = None,
+    flag_log_scale: bool = False, 
+    flag_share_y_scale: bool = True
 ) -> None:
     # 3つのプロットを1つの画像にまとめる
     fig, axes = plt.subplots(1, 3, figsize=(27, 7), tight_layout=True, sharey=flag_share_y_scale)
 
-    # MSEのプロット（左側）
-    sns.lineplot(
-        linewidth=5,
-        marker="o",
-        markersize=8,
-        markers=True,
-        x=x,
-        y="se",
-        hue="est",
-        ax=axes[0],
-        palette=palette,
-        data=result_df.query("(est == 'IPS' or est == 'DR' or est == 'DM' or est == 'MIPS' or est == 'MDR')"),
 
-    )
-    if flag_log_scale == True: 
-        # y軸をlogスケールに設定
-        axes[0].set_yscale("log")
-    axes[0].set_xlabel("", fontsize=25)
-    # axes[0].set_xlabel(xlabel, fontsize=25)
-    axes[0].set_ylabel("")  
-    axes[0].set_title("MSE", fontsize=25)
-    axes[0].legend().set_visible(False)  
-    axes[0].tick_params(axis='both', which='major', labelsize=20)  
+    for i in range(3):
+        # MSEのプロット（左側）
+        sns.lineplot(
+            linewidth=5,
+            marker="o",
+            markersize=conf.markersize,
+            markers=True,
+            x=x,
+            y=y_list[i],
+            hue="est",
+            ax=axes[i],
+            palette=palette,
+            data=result_df.query("(est == 'IPS' or est == 'DR' or est == 'DM' or est == 'MIPS' or est == 'MDR')"),
 
-    # Biasのプロット（中央）
-    sns.lineplot(
-        linewidth=5,
-        marker="o",
-        markersize=8,
-        markers=True,
-        x=x,
-        y="bias",
-        hue="est",
-        ax=axes[1],
-        palette=palette,
-        data=result_df.query("(est == 'IPS' or est == 'DR' or est == 'DM' or est == 'MIPS' or est == 'MDR')"),
-    )
-    if flag_log_scale == True:
-        # y軸をlogスケールに設定
-        axes[1].set_yscale("log")
-    axes[1].set_xlabel(xlabel, fontsize=25)
-    axes[1].set_ylabel("")  
-    axes[1].set_title("Bias", fontsize=25)
-    axes[1].legend().set_visible(False)  
-    axes[1].tick_params(axis='both', which='major', labelsize=20)  
+        )
+        if x == "n_rounds" or "n_action": 
+            # y軸をlogスケールに設定
+            axes[i].set_xscale("log")
+        if flag_log_scale == True: 
+            # y軸をlogスケールに設定
+            axes[i].set_yscale("log")
+        if i == 1:
+            axes[i].set_xlabel(xlabel, fontsize=25)
+        else:
+            axes[i].set_xlabel("", fontsize=25)
+        if xticklabels != None:
+            axes[i].set_xticks(xticklabels)
+            axes[i].set_xticklabels(xticklabels, fontsize=18)
+        axes[i].set_ylabel("")  
+        axes[i].set_title(title_list[i], fontsize=25)
+        axes[i].legend().set_visible(False)  
+        axes[i].tick_params(axis='both', which='major', labelsize=20)  
 
-    # Varianceのプロット（右側）
-    sns.lineplot(
-        linewidth=5,
-        marker="o",
-        markersize=8,
-        markers=True,
-        x=x,
-        y="variance",
-        hue="est",
-        ax=axes[2],
-        palette=palette,
-        data=result_df.query("(est == 'IPS' or est == 'DR' or est == 'DM' or est == 'MIPS' or est == 'MDR')"),
-    )
-    if flag_log_scale == True:
-        # y軸をlogスケールに設定
-        axes[2].set_yscale("log")
-    axes[2].set_xlabel("", fontsize=25)
-    # axes[2].set_xlabel(xlabel, fontsize=25)
-    axes[2].set_ylabel("")  
-    axes[2].set_title("Variance", fontsize=25)
-    axes[2].legend().set_visible(False)  
-    axes[2].tick_params(axis='both', which='major', labelsize=20)  
+
 
     # 凡例を中央のプロットの真上に配置する
     fig.legend(handles=line_legend_elements, 

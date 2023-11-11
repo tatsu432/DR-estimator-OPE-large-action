@@ -63,9 +63,9 @@ def plot_line(
             data=result_df.query("(est == 'IPS' or est == 'DR' or est == 'DM' or est == 'MIPS' or est == 'MDR')"),
 
         )
-        if x == "n_rounds" or "n_action": 
-            # y軸をlogスケールに設定
-            axes[i].set_xscale("log")
+        # if x == "n_rounds" or "n_action": 
+        #     # y軸をlogスケールに設定
+        #     axes[i].set_xscale("log")
         if flag_log_scale == True: 
             # y軸をlogスケールに設定
             axes[i].set_yscale("log")

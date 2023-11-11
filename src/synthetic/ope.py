@@ -21,6 +21,7 @@ def run_ope(
     # evaluation policy \pi(a|x)
     action_dist_val: np.ndarray,
     embed_selection: bool = False,
+    random_state: int = 12345, 
 ) -> np.ndarray:
     
 
@@ -36,7 +37,7 @@ def run_ope(
         base_model=RandomForestRegressor(
             n_estimators=10,
             max_samples=0.8,
-            random_state=12345 + round
+            random_state=random_state + round
         ),
     )
 
@@ -50,7 +51,7 @@ def run_ope(
         reward=val_bandit_data["reward"],  # reward; r
         # Number of folds in the cross-fitting procedure.
         n_folds=2,
-        random_state=12345 + round
+        random_state=random_state + round
     )
 
     if embed_selection is False:
@@ -146,7 +147,7 @@ def run_ope(
         base_model=RandomForestRegressor(
             n_estimators=10,
             max_samples=0.8,
-            random_state=12345 + round
+            random_state=random_state + round
         ),
     )
 
@@ -161,7 +162,7 @@ def run_ope(
         reward=val_bandit_data["reward"],  # reward; r
         # Number of folds in the cross-fitting procedure.
         n_folds=2,
-        random_state=12345 + round
+        random_state=random_state + round
     )
 
     q_xi_ai_ei = estimated_rewards_mdr[np.arange(val_bandit_data["n_rounds"]), val_bandit_data["action"]]

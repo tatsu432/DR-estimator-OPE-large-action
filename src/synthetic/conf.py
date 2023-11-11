@@ -24,6 +24,8 @@ n_unobserved_cat_dim=0
 n_deficient_actions=0
 reward_function=linear_reward_function
 reward_std=2.5
+is_optimal = True
+embed_selection = False
 random_state=12345 
 
 eps=0.05
@@ -49,42 +51,41 @@ markersize = 12
 # n_deficient_actions_list = [0, 5, 10]
 # reward_std_list = [1, 2, 3]
 
-# faster
-n_seeds = 20
-n_test = 200000
+# # faster
+# n_seeds = 20
+# n_test = 10000
+# n_train = 10000
+# n_actions_list = [500, 1000, 1500, 2000, 2500, 3000]
+# n_train_list = [5000, 10000, 15000, 20000, 25000, 30000]
+# beta_list = [-3, -2, -1, 0, 1, 2, 3]
+# epsilon_list = [0, 0.2, 0.4, 0.6, 0.8, 1.0]
+# n_cat_dim_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+# n_cat_per_dim_list = [5, 10, 15, 20]
+# n_deficient_actions_list = [0, 100, 300, 500, 700, 900]
+# reward_std_list = [1, 2, 3, 4, 5, 6]
+
+# slower
+n_seeds = 100
+n_test = 10000
 n_train = 10000
-n_actions_list = [10, 20, 50, 100, 200, 500, 1000, 2000, 5000]
-n_train_list = [500, 1000, 2000, 4000, 8000]
-beta_list = [-3, -2, -1, 0, 1, 2, 3]
+n_actions_list = [500, 1000, 1500, 2000, 2500, 3000]
+n_train_list = [5000, 10000, 15000, 20000, 25000, 30000]
+beta_list = [-3, -2, -1, -0.5, 0, 0.5, 1, 2, 3]
 epsilon_list = [0, 0.2, 0.4, 0.6, 0.8, 1.0]
 n_cat_dim_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-n_cat_per_dim_list = [5, 10, 15, 20]
+n_cat_per_dim_list = [5, 10, 15, 20, 25, 30]
 n_deficient_actions_list = [0, 100, 300, 500, 700, 900]
 reward_std_list = [1, 2, 3, 4, 5, 6]
 
-# # slower
+# # slowest
 # n_seeds = 100
-# n_test = 10000
+# n_test = 200000
 # n_train = 10000
-# n_actions_list = [500, 1000, 2000, 4000, 8000]
-# n_train_list = [500, 1000, 2000, 4000, 8000]
+# n_actions_list = [500, 1000, 1500, 2000, 2500, 3000]
+# n_train_list = [5000, 10000, 15000, 20000, 25000, 30000]
 # beta_list = [-3, -2, -1, -0.5, 0, 0.5, 1, 2, 3]
 # epsilon_list = [0, 0.2, 0.4, 0.6, 0.8, 1.0]
 # n_cat_dim_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 # n_cat_per_dim_list = [5, 10, 15, 20, 25, 30]
 # n_deficient_actions_list = [0, 100, 300, 500, 700, 900]
 # reward_std_list = [1, 2, 3, 4, 5, 6]
-
-# # slowest
-# n_seeds = 100
-# n_test = 1000
-# n_train = 5000
-# n_actions_list = [500, 1000, 2000, 4000, 8000]
-# n_train_list = [500, 1000, 2000, 4000, 8000]
-# beta_list = [-3, -2, -1, -0.5, 0, 0.5, 1, 2, 3]
-# epsilon_list = [0, 0.2, 0.4, 0.6, 0.8, 1.0]
-# n_cat_dim_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-# n_cat_per_dim_list = [5, 10, 15, 20, 25, 30, 35, 40]
-# n_deficient_actions_list = [0, 100, 300, 500, 700, 900]
-# reward_std_list = [1, 2, 3, 4, 5, 6]
-

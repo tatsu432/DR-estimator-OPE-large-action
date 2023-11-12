@@ -100,6 +100,9 @@ src/synthetic/main_reward_std.ipynb
 src/synthetic/main_n_cat_dim.ipynb
 ```
 
+<div align="center">
+<img width="800" alt="number of category dimensions" src="result/new/n_cat_dim.png">
+</div>
 
 ```
 # How does MDR perform with varying number of categories per dimension?

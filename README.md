@@ -47,7 +47,6 @@ src/synthetic/main_n_actions.ipynb
 ```
 <div align="center">
 <img width="800" alt="number of actions" src="result/new/n_actions.png">
-<img width="800" alt="number of actions" src="result/new/n_actions_2.png">
 </div>
 
 ```
@@ -56,7 +55,6 @@ src/synthetic/main_n_rounds.ipynb
 ```
 <div align="center">
 <img width="800" alt="number of samples" src="result/new/n_rounds.png">
-<img width="800" alt="number of samples" src="result/new/n_rounds_2.png">
 </div>
 
 

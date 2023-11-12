@@ -59,49 +59,56 @@ src/synthetic/main_n_rounds.ipynb
 <img width="800" alt="number of samples" src="result/new/n_rounds_2.png">
 </div>
 
-<!-- 
+
 ```
 # How does MDR perform with varying beta?
 src/synthetic/main_beta.ipynb
 ```
-![beta](https://github.com/tatsu432/DR-estimator-OPE-large-action/assets/80372303/32c10899-2421-4c86-b9e3-6b097302fee6)
 
-![beta_log](https://github.com/tatsu432/DR-estimator-OPE-large-action/assets/80372303/777fac76-cf91-497a-be48-91b9ae0ac798)
+<div align="center">
+<img width="800" alt="beta" src="result/new/beta.png">
+</div>
 
 ```
 # How does MDR perform with varying epsilon?
 src/synthetic/main_epsilon.ipynb
 ```
-![epsilon](https://github.com/tatsu432/DR-estimator-OPE-large-action/assets/80372303/1f05a862-5465-44df-99c8-ad916bc0fb22)
-![epsilon_log](https://github.com/tatsu432/DR-estimator-OPE-large-action/assets/80372303/7f79501d-53f2-4e15-9609-0dfb6d14d5a0)
+
+<div align="center">
+<img width="800" alt="epsilon" src="result/new/epsilon.png">
+</div>
 
 ```
 # How does MDR perform with varying number of deficient actions?
 src/synthetic/main_n_decifient_actions.ipynb
 ```
-![n_deficient_actions](https://github.com/tatsu432/DR-estimator-OPE-large-action/assets/80372303/db68103f-a349-4a2d-ae73-5c15e390141d)
-![n_deficient_actions_log](https://github.com/tatsu432/DR-estimator-OPE-large-action/assets/80372303/2e9605a9-9652-4a9b-be30-6cde5dd3b2e0)
+
+<div align="center">
+<img width="800" alt="number of deficient actions" src="result/new/n_deficient_actions.png">
+</div>
 
 ```
 # How does MDR perform with varying standard deviation of reward?
 src/synthetic/main_reward_std.ipynb
 ```
-![reward_std](https://github.com/tatsu432/DR-estimator-OPE-large-action/assets/80372303/b31a4f06-1905-433b-a60e-fb1ff6617a83)
-![reward_std_log](https://github.com/tatsu432/DR-estimator-OPE-large-action/assets/80372303/c4e4a05a-16aa-4efe-8f23-1dda27ed7558)
+
+<div align="center">
+<img width="800" alt="reward noise" src="result/new/reward_std.png">
+</div>
+
 
 ```
 # How does MDR perform with varying number of category dimensions?
 src/synthetic/main_n_cat_dim.ipynb
 ```
-![n_cat_dim](https://github.com/tatsu432/DR-estimator-OPE-large-action/assets/80372303/4632a76e-c9bd-46a1-833e-d3520300dd78)
-![n_cat_dim_log](https://github.com/tatsu432/DR-estimator-OPE-large-action/assets/80372303/d900c406-7f29-4ab6-a952-804913e44d66)
+
 
 ```
 # How does MDR perform with varying number of categories per dimension?
 src/synthetic/main_n_cat_per_dim.ipynb
 
 ```
-![n_cat_per_dim](https://github.com/tatsu432/DR-estimator-OPE-large-action/assets/80372303/2c225c4f-6749-48d4-958d-dd5a68734881)
-![n_cat_per_dim_log](https://github.com/tatsu432/DR-estimator-OPE-large-action/assets/80372303/2636a1fa-bbf2-4383-b462-525602189b92) -->
 
-
+<div align="center">
+<img width="800" alt="number of categories per dimension" src="result/new/n_cat_per_dim.png">
+</div>

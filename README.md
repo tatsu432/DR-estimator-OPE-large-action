@@ -45,15 +45,15 @@ hydra-core = "1.0.7"
 # How does MDR perform with varying number of actions?
 src/synthetic/main_n_actions.ipynb
 ```
-<img width="400" alt="number of actions" src="result/new/n_actions.png">
-<img width="400" alt="number of actions" src="result/new/n_actions_2.png">
+<img width="800" alt="number of actions" src="result/new/n_actions.png">
+<img width="800" alt="number of actions" src="result/new/n_actions_2.png">
 
 ```
 # How does MDR perform with varying number of samples?
 src/synthetic/main_n_rounds.ipynb
 ```
-<img width="400" alt="number of samples" src="result/new/n_rounds.png">
-<img width="400" alt="number of samples" src="result/new/n_rounds_2.png">
+<img width="800" alt="number of samples" src="result/new/n_rounds.png">
+<img width="800" alt="number of samples" src="result/new/n_rounds_2.png">
 
 <!-- 
 ```

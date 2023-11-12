@@ -45,18 +45,19 @@ hydra-core = "1.0.7"
 # How does MDR perform with varying number of actions?
 src/synthetic/main_n_actions.ipynb
 ```
-<img width="400" alt="number of actions" src="result/new/n_actions.png.png">
-<img width="400" alt="number of actions" src="result/new/n_actions_2.png.png">
+<img width="400" alt="number of actions" src="result/new/n_actions.png">
+<img width="400" alt="number of actions" src="result/new/n_actions_2.png">
 
 ```
 # How does MDR perform with varying number of samples?
 src/synthetic/main_n_rounds.ipynb
 ```
-<img width="400" alt="number of samples" src="result/new/n_rounds.png.png">
-<img width="400" alt="number of samples" src="result/new/n_rounds_2.png.png">
+<img width="400" alt="number of samples" src="result/new/n_rounds.png">
+<img width="400" alt="number of samples" src="result/new/n_rounds_2.png">
 
+<!-- 
 ```
-<!-- # How does MDR perform with varying beta?
+# How does MDR perform with varying beta?
 src/synthetic/main_beta.ipynb
 ```
 ![beta](https://github.com/tatsu432/DR-estimator-OPE-large-action/assets/80372303/32c10899-2421-4c86-b9e3-6b097302fee6)

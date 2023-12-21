@@ -5,3 +5,9 @@ CMR/
 prac/
 TSR/
 __pycache__/
+
+.DS_Store
+
+
+varying_*_data/
+result_df.csv

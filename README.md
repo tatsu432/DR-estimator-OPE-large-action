@@ -1,6 +1,6 @@
 # Doubly Robust Estimator for Off-Policy Evaluation with Large Action Spaces
 
-This repository is for the exeriment conducted in ["Doubly Robust Estimator for Off-Policy Evaluation with Large Action Spaces"](https://arxiv.org/abs/2308.03443) ([IEEE SSCI 2023](https://attend.ieee.org/ssci-2023/))" by [Tatsuhiro Shimizu](https://ss1.xrea.com/tshimizu.s203.xrea.com/works/index.html) and [Laura Forastiere](https://ysph.yale.edu/profile/laura-forastiere/).
+This repository is for the experiment conducted in ["Doubly Robust Estimator for Off-Policy Evaluation with Large Action Spaces"](https://arxiv.org/abs/2308.03443) ([IEEE SSCI 2023](https://attend.ieee.org/ssci-2023/))" by [Tatsuhiro Shimizu](https://ss1.xrea.com/tshimizu.s203.xrea.com/works/index.html) and [Laura Forastiere](https://ysph.yale.edu/profile/laura-forastiere/).
 
 ## Abstract
 
@@ -42,7 +42,7 @@ hydra-core = "1.0.7"
 
 ### Section 5: Synthetic Data Experiment
 ```
-# How does MDR perform with varying number of actions?
+# How does MDR perform with the varying number of actions?
 src/synthetic/main_n_actions.ipynb
 ```
 <div align="center">
@@ -50,7 +50,7 @@ src/synthetic/main_n_actions.ipynb
 </div>
 
 ```
-# How does MDR perform with varying number of samples?
+# How does MDR perform with the varying number of samples?
 src/synthetic/main_n_rounds.ipynb
 ```
 <div align="center">
@@ -59,7 +59,7 @@ src/synthetic/main_n_rounds.ipynb
 
 
 ```
-# How does MDR perform with varying beta?
+# How does MDR perform with the varying beta?
 src/synthetic/main_beta.ipynb
 ```
 
@@ -77,7 +77,7 @@ src/synthetic/main_epsilon.ipynb
 </div>
 
 ```
-# How does MDR perform with varying number of deficient actions?
+# How does MDR perform with the varying number of deficient actions?
 src/synthetic/main_n_decifient_actions.ipynb
 ```
 
@@ -96,7 +96,7 @@ src/synthetic/main_reward_std.ipynb
 
 
 ```
-# How does MDR perform with varying number of category dimensions?
+# How does MDR perform with the varying number of category dimensions?
 src/synthetic/main_n_cat_dim.ipynb
 ```
 
@@ -105,7 +105,7 @@ src/synthetic/main_n_cat_dim.ipynb
 </div>
 
 ```
-# How does MDR perform with varying number of categories per dimension?
+# How does MDR perform with the varying number of categories per dimension?
 src/synthetic/main_n_cat_per_dim.ipynb
 
 ```

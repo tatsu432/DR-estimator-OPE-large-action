@@ -14,14 +14,11 @@ Code for the paper [*Doubly Robust Estimator for Off-Policy Evaluation with Larg
 
 | Resource | Description |
 | -------- | ----------- |
-| This README | Install, Hydra CLI, Docker / Compose, tests, CI (lint) |
-| [Dockerfile](Dockerfile) | Reproducible image: `README.md` in build context, [`docker/cpu_only_sync.sh`](docker/cpu_only_sync.sh) then CPU PyTorch; `uv run --no-sync` entrypoint, non-root user |
-| [compose.yaml](compose.yaml) | Compose service with host-mounted `outputs/` |
 | [src/synthetic/hydra_conf/config.yaml](src/synthetic/hydra_conf/config.yaml) | App defaults (dataset, experiment, scale, Hydra `chdir`) |
 | [src/synthetic/hydra_conf/experiment/](src/synthetic/hydra_conf/experiment/) | One YAML per sweep axis (beta, `n_actions`, epsilon, …) |
 | [src/synthetic/hydra_conf/scale/](src/synthetic/hydra_conf/scale/) | Budget presets: `fastest`, `faster`, `bestest`, `slowest` |
 | [tests/](tests/) | `pytest` (fast unit tests + optional `@pytest.mark.integration`) |
-| [.github/workflows/lint.yml](.github/workflows/lint.yml) | Ruff, Mypy, fast pytest on push/PR |
+
 
 ## Installation and quick start
 

@@ -1,0 +1,7 @@
+services:
+  synthetic:
+    build: .
+    image: dr-ope-synthetic:local
+    volumes:
+      - ./outputs:/app/outputs
+    # Append Hydra overrides after the image name when using compose run.

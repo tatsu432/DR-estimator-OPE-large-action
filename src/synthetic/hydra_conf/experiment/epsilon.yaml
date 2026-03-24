@@ -1,0 +1,6 @@
+name: epsilon
+mode: policy_eps
+sweep_values: [0, 1.0]
+result_column: epsilon
+xlabel: "$\\epsilon$"
+output_subdir: varying_epsilon_data

@@ -1,0 +1,7 @@
+name: reward_std
+mode: dataset_field
+field: reward_std
+sweep_values: [1, 3]
+result_column: reward_std
+xlabel: "$\\sigma_r$"
+output_subdir: varying_reward_std_data

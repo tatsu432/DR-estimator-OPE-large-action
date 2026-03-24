@@ -1,0 +1,7 @@
+name: n_cat_per_dim
+mode: dataset_field
+field: n_cat_per_dim
+sweep_values: [5, 15]
+result_column: n_cat_per_dim
+xlabel: "$L$"
+output_subdir: varying_n_cat_per_dim_data

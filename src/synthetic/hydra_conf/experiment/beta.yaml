@@ -1,0 +1,7 @@
+name: beta
+mode: dataset_field
+field: beta
+sweep_values: [-3, 3]
+result_column: beta
+xlabel: "$\\beta$"
+output_subdir: varying_beta_data

@@ -1,0 +1,64 @@
+[build-system]
+requires = ["hatchling>=1.18"]
+build-backend = "hatchling.build"
+
+[project]
+name = "dr-estimator-ope-large-action"
+version = "0.1.0"
+description = "Synthetic experiments for doubly robust OPE with large action spaces (extends OBP)"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.12"
+dependencies = [
+    "hydra-core>=1.3.2",
+    "matplotlib>=3.10.8",
+    "numpy>=2.4.3",
+    "obp>=0.4.1",
+    "pandas>=3.0.1",
+    "scikit-learn>=1.8.0",
+    "seaborn>=0.13.2",
+    "tqdm>=4.67.3",
+    "types-seaborn>=0.13.2.20251221",
+    "types-tqdm>=4.67.3.20260303",
+]
+
+[project.scripts]
+run-synthetic-ope = "synthetic.run_experiment:main"
+
+[dependency-groups]
+dev = [
+    "pytest>=8.3",
+    "ruff>=0.9",
+    "mypy>=1.14",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/synthetic"]
+
+[tool.ruff]
+target-version = "py312"
+line-length = 100
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "W"]
+ignore = ["E501"]
+
+[tool.mypy]
+python_version = "3.12"
+warn_unused_configs = true
+warn_return_any = true
+disallow_untyped_defs = false
+ignore_missing_imports = true
+mypy_path = ["src"]
+packages = ["synthetic"]
+
+[[tool.mypy.overrides]]
+module = ["tests.*"]
+disallow_untyped_defs = false
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+markers = [
+    "integration: trains estimators; slower smoke for run_ope",
+]

@@ -1,0 +1,7 @@
+name: n_actions
+mode: dataset_field
+field: n_actions
+sweep_values: [5, 10, 20]
+result_column: n_action
+xlabel: "number of actions $|\\mathcal{A}|$"
+output_subdir: varying_n_actions_data

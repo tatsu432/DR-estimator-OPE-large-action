@@ -1,0 +1,29 @@
+defaults:
+  - dataset: default
+  - experiment: beta
+  - scale: fastest
+  - override hydra/job_logging: default
+  - override hydra/hydra_logging: default
+  - _self_
+
+hydra:
+  job:
+    name: ${experiment.name}
+    chdir: true
+  run:
+    dir: outputs/${hydra.job.name}/${now:%Y-%m-%d_%H-%M-%S}
+
+random_state: 12345
+embed_selection: false
+markersize: 12
+
+n_seeds: ${scale.n_seeds}
+n_test: ${scale.n_test}
+n_train: ${scale.n_train}
+
+policy:
+  eps: 0.05
+  is_optimal: true
+
+output:
+  save_legacy_csv: true

@@ -1,0 +1,23 @@
+name: docker
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+
+jobs:
+  build-and-smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build image
+        run: docker build -t dr-ope-synthetic:ci .
+
+      - name: Smoke run (minimal seeds)
+        run: |
+          docker run --rm \
+            -v "${{ github.workspace }}/outputs:/app/outputs" \
+            dr-ope-synthetic:ci \
+            experiment=beta scale=fastest n_seeds=1

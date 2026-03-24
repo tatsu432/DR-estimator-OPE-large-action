@@ -1,0 +1,12 @@
+# SyntheticBanditDatasetWithActionEmbeds (OBP); reward_function is resolved in code
+n_actions: 1000
+dim_context: 10
+beta: -1
+reward_type: continuous
+n_cat_per_dim: 10
+latent_param_mat_dim: 5
+n_cat_dim: 3
+n_unobserved_cat_dim: 0
+n_deficient_actions: 0
+reward_std: 2.5
+reward_function: linear

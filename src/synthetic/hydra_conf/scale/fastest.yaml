@@ -1,0 +1,4 @@
+# Smallest budget (matches former conf.py "fastestest" block)
+n_seeds: 2
+n_test: 20
+n_train: 20

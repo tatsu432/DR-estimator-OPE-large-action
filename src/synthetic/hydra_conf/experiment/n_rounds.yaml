@@ -1,0 +1,6 @@
+name: n_rounds
+mode: val_n_rounds
+sweep_values: [20, 40]
+result_column: n_rounds
+xlabel: "number of samples in the logged data $n$"
+output_subdir: varying_n_rounds_data

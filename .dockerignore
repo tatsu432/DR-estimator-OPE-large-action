@@ -1,0 +1,16 @@
+.git
+.venv
+venv
+__pycache__
+*.pyc
+.pytest_cache
+.mypy_cache
+.ruff_cache
+outputs
+result
+/df/
+varying_*_data
+.DS_Store
+*.egg-info
+dist
+build

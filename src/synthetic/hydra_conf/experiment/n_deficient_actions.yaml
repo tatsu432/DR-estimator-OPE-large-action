@@ -1,0 +1,7 @@
+name: n_deficient_actions
+mode: dataset_field
+field: n_deficient_actions
+sweep_values: [0, 10]
+result_column: n_deficient_actions
+xlabel: "$|\\mathcal{A}_{\\mathrm{def}}}|$"
+output_subdir: varying_n_deficient_actions_data
